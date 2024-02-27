@@ -1,0 +1,47 @@
+{% extends "shop/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static '/css/feedbacks.css' %}">
+{% endblock %}
+
+{% block title %}Tours statistics{% endblock %}
+
+{% block content %}
+    <table class="stats">
+        <caption class="stats-header">Статистика отзывов</caption>
+        <thead>
+        <tr>
+            <th>Рейтинг</th>
+            <th>Количество отзывов</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>One</td>
+            <td>{{ feedbacks.one|length }}</td>
+        </tr>
+        <tr>
+            <td>Two</td>
+            <td>{{ feedbacks.two|length }}</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>{{ feedbacks.three|length }}</td>
+        </tr>
+        <tr>
+            <td>Four</td>
+            <td>{{ feedbacks.four|length }}</td>
+        </tr>
+        <tr>
+            <td>Five</td>
+            <td>{{ feedbacks.five|length }}</td>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

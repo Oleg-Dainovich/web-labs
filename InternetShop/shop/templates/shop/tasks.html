@@ -1,0 +1,72 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static '/css/tasks.css' %}">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/table.js' %}"></script>
+    <script src="{% static 'js/banners.js' %}"></script>
+    <script src="{% static 'js/array.js' %}"></script>
+    <script src="{% static 'js/class.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <section id="generated-table">
+        <h2>Генерируемая таблица:</h2>
+        <br>
+        <table id="table" border="1"></table>
+        <br>
+        <label for="tableSize">Размер таблицы:</label>
+        <input type="number" id="tableSize" value="1">
+        <button id="generate">Создать таблицу</button>
+        <button id="transpose">Транспорировать</button>
+        <button id="addRow">Добавить строку</button>
+        <button id="addColumn">Добавить колонку</button>
+        <br>
+        <label for="maxSelection">Максимальный выбор в строке (соседей по бокам выбрать нельзя):</label>
+        <input type="number" id="maxSelection" value="0">
+        <button id="updateMaxSelection">Применить ограничения</button>
+        <br>
+    </section>
+
+    <section id="banner">
+        <a id="banner-link" href="https://whiskas.ru/">
+            <img src="https://whiskas.ru/Content/img/header/slider1-adult.jpg"
+                 alt="banner" id="banner-img">
+        </a>
+        {% if user.is_staff %}
+            <form id="interval-form">
+                <label for="interval">Впишите интервал (мс): </label>
+                <input type="number" name="interval" min="100" id="interval">
+                <button id="submit-btn">Установить интервал</button>
+            </form>
+        {% endif %}
+    </section>
+
+    <section id="associative-container">
+        <h2>Поиск</h2>
+        <form class="form" name="search-form">
+            <label for="initials_search">Фамилия и инициалы</label>
+            <input type="text" minlength="1" name="initials_search" id="initials_search">
+            <input class="button" type="submit" value="Search">
+            <span id="result"></span>
+        </form>
+        <h2>Работники</h2>
+        <form class="form" name="associative-form">
+            <label for="initials">Фамилия и инициалы</label>
+            <input type="text" minlength="1" name="initials" id="initials">
+            <label for="phone">Номер:</label>
+            <input type="text" name="phone" id="phone">
+            <input class="button" type="submit" value="Add staff">
+        </form>
+        <ul id="staff-list"></ul>
+    </section>
+
+    <section id="class_task">
+        <button type="button" onclick="htmlPrint()">Классы</button>
+        <div id="output"></div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static '/css/info.css' %}">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/style_changer.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<br>
+
+<form id="stylingForm">
+    <label>
+        <input type="radio" name="stylingOption" value="fontSize"> Change Font Size
+    </label>
+    <label>
+        <input type="radio" name="stylingOption" value="textColor"> Change Text Color
+    </label>
+    <label>
+        <input type="radio" name="stylingOption" value="bgColor"> Change Background Color
+    </label>
+
+    <div id="formContainer"></div>
+
+    <!-- <button type="reset">Reset</button> -->
+</form>
+
+<br>
+
+    <section class="workers">
+        <h2>Работники магазина</h2>
+        <ul class="contact-list">
+            <li class="contact" itemscope itemtype="https://schema.org/Person">
+                <h3 itemprop="name">Алиса Игорева</h3>
+                <p itemprop="jobTitle">Главный менеджер</p>
+                <p>Email: <a href="mailto:alice@zoo.com" itemprop="email">alice@zoo.com</a></p>
+                <p>Телефон: <span itemprop="telephone">(555) 987-6543</span></p>
+                <img src="{% static 'images/girl.jfif' %}" width="200" height="250"
+                    alt="employee" itemprop="image">
+            </li>
+            <li class="contact" itemscope itemtype="https://schema.org/Person">
+                <h3 itemprop="name">Игорь Шелков</h3>
+                <p itemprop="jobTitle">Заместитель менеджера</p>
+                <p>Email: <a href="mailto:igorshell@zoo.com" itemprop="email">igorshell@zoo.com</a></p>
+                <p>Телефон: <span itemprop="telephone">(555) 123-4567</span></p>
+                <img src="{% static 'images/igor.jpg' %}" width="200" height="250"
+                    alt="employee" itemprop="image">
+            </li>
+            <li class="contact" itemscope itemtype="https://schema.org/Person">
+                <h3 itemprop="name">Владимир Хой</h3>
+                <p itemprop="jobTitle">Консультант</p>
+                <p>Email: <a href="mailto:vladimir@zoo.com" itemprop="email">vladimir@zoo.com</a></p>
+                <p>Телефон: <span itemprop="telephone">(555) 789-0123</span></p>
+                <img src="{% static 'images/gosling.jfif' %}" width="200" height="250"
+                    alt="employee" itemprop="image">
+            </li>
+            <li class="contact" itemscope itemtype="https://schema.org/Person">
+                <h3 itemprop="name">Людмила Гобз</h3>
+                <p itemprop="jobTitle">Заведующий хозяйством</p>
+                <p>Email: <a href="mailto:ludmila@zoo.com" itemprop="email">ludmila@zoo.com</a></p>
+                <p>Телефон: <span itemprop="telephone">(555) 234-5678</span></p>
+                <img src="{% static 'images/lilgirl.jfif' %}" width="200" height="250"
+                    alt="employee" itemprop="image">
+            </li>
+        </ul>
+    </section>
+
+{% endblock %}

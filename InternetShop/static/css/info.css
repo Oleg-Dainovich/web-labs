@@ -1,0 +1,148 @@
+::selection {
+    background-color: rgb(196, 32, 155);
+    color: black;
+  }
+
+.about-us {
+    position: relative;
+    top: 100px;
+}
+
+.comp-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.comp-logo:hover {
+    transform: scale(1.1);
+}
+
+.company-data {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.certificate {
+    width: 600px;
+    height: 400px;
+    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    z-index: 0;
+    border: 30px solid;
+    -moz-border-image: url('../images/bg_gradient.jpeg') 10 round;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.questions-list {
+    position: relative;
+    top: 100px;
+}
+
+.questions-list p::first-letter {
+    color: red;
+    font-weight: bold;
+}
+
+.context {
+    font-style: italic;
+}
+
+.workers {
+    position: relative;
+    top: 100px;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.contact {
+    width: 250px;
+    display: flex;
+    margin: 1%;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 10px solid black;
+}
+
+.coupons {
+    position: relative;
+    top: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .coupon {
+    background-color: #5ca0c3;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .coupon h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .coupon p {
+    margin-bottom: 10px;
+  }
+  
+  .coupon time {
+    font-style: italic;
+  }
+  
+  .coupon p strong {
+    color: rgb(130, 56, 153);
+  }
+  
+.context-valid {
+    color: rgb(194, 11, 11);
+}
+
+.vacancy {
+    position: relative;
+    top: 100px;
+}
+
+@media (min-width: 1000px) {
+    .vacancies {
+        min-width: 250px;
+    }
+}
+
+.vacancies {
+    float: left;
+    min-width: 400px;
+    max-width: 400px;
+    height: 500px;
+    border: 10px solid black;
+    margin: 1%;
+    padding: 1%;
+}
+
+.policy {
+    position: relative;
+    top: 100px;
+    text-align: left;
+    text-indent: 3em;
+}
+
+ol {
+    list-style: none;
+  }
+
+li::before {
+    content: "*";
+}
+
+#stylingForm {
+    position: relative;
+    top: 100px;
+    left: 20px;
+}

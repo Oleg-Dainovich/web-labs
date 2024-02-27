@@ -1,0 +1,146 @@
+#last-article {
+    position: relative;
+    top: 1825px;
+    left: 200px;
+    height: 200px;
+    width: 500px;
+}
+  
+  #last-article h2 {
+    /* font-size: 24px; */
+    margin-bottom: 10px;
+  }
+  
+  #last-article h3 {
+    /* font-size: 18px; */
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #last-article h3 a {
+    text-decoration: none;
+    /* color: #0a4d15; */
+  }
+
+  /* #last-article h3 a:active {
+    color: #24ca3f;
+  } */
+
+  .jump {
+    position: relative;
+    top: 1775px;
+    animation-name: jumpAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  
+.jump-text {
+  position: relative;
+    top: 1775px;
+}
+
+  @keyframes jumpAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .company-list {
+    position: relative;
+    top: 1875px;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  .company-list-text {
+    position: relative;
+    top: 1900px;
+  }
+  
+  .company {
+    position: relative; /* позиционирование для родительского блока */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #0ed8ba;
+    box-shadow: 10px 5px 5px rgb(11, 161, 216);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .company a {
+    text-decoration: none;
+    /* color: #333; */
+    font-weight: bold;
+    font-family: Arial, sans-serif; 
+    letter-spacing: 2px;
+  }
+  
+  .company img {
+    position: absolute; 
+    top: 50%; /* по вертикали в центре */
+    left: 50%; /* по горизонтали в центре */
+    transform: translate(-50%, -50%); 
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .scroll-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1775px; 
+    /* 1900 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+  }
+
+  .scroll-pic {
+    position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+  }
+
+  #centerCat {
+    width: 70%;
+    height: 70%;
+  }
+
+  #bg {
+    object-fit: fill
+  }
+  
+  #text {
+    position: relative;
+    color: white;
+    font-size: 8rem;
+    font-family: inherit;
+    text-shadow: 0 0 10px #000000; 
+  }
+ 
+  
+  .scroll-content::before{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background:linear-gradient(to top,#7be4f2,transparent);
+    z-index: 1000;
+  }
+  

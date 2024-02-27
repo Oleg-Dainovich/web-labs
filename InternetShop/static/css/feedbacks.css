@@ -1,0 +1,61 @@
+.feedback-page {
+    position: relative;
+    top: 100px;
+}
+
+.form-container {
+    position: relative;
+    top: 100px;
+}
+
+#id_title {
+    width: 250px;
+    height: 50px;
+}
+
+#id_rating {
+    width: 50px;
+    height: 50px;
+}
+
+#id_content {
+    width: 250px;
+    height: 100px;
+}
+
+.stats {
+    position: relative;
+    top: 100px;
+}
+
+.stats-header {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+table {
+    border-collapse: collapse; 
+    border: 1px solid #000; 
+  }
+
+td, th {
+    border: 1px solid #000; 
+  }
+
+td:empty {
+    background-color: #f5f5f5; 
+  }
+
+thead {
+    background-color: #e7fb0c; 
+}
+
+tbody {
+    background-color: #12d26f; 
+}
+
+  tr:hover {
+    background-color: #f9f9f9;
+  }

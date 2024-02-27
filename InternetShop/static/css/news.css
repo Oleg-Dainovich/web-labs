@@ -1,0 +1,27 @@
+.article-list {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.article-card {
+    max-width: 200px;
+    display: flex;
+    margin: 1%;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 5px solid black;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.details {
+    position: relative;
+    top: 100px;
+}

@@ -1,0 +1,58 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static '/css/info.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class='questions-list' itemscope itemtype="https://schema.org/FAQPage">
+    <h2 itemprop="name"><span class="context">Наиболее</span> задаваемые вопросы</h2>
+    <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <summary itemprop="name">Каковы ваши способы оплаты?</summary>
+        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+                Мы принимаем платежи посредством кредитных и дебетовых карт (Visa, Mastercard),
+                 электронных платежных систем (PayPal, Apple Pay) и наличными при самовывозе в наших магазинах.
+            </p>
+        </div>
+    </details>
+    <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <summary itemprop="name">Каковы ваши сроки доставки?</summary>
+        <p itemprop="text">
+            Мы стремимся доставить ваши заказы в течение 2-5 рабочих дней. 
+            Точные сроки зависят от вашего местоположения и выбранного способа доставки.
+        </p>
+    </details>
+    <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <summary itemprop="name">Есть ли возможность возврата или обмена товара?
+        </summary>
+        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+                Да, мы предоставляем возможность возврата или обмена товара в течение 14 дней после получения заказа. 
+                Просим сохранить упаковку и предоставить чек или подтверждение покупки.
+            </p>
+        </div>
+    </details>
+    <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <summary itemprop="name">Как я могу отслеживать свой заказ?</summary>
+        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+                После оформления заказа вы получите уникальный номер отслеживания, 
+                который вы сможете использовать на нашем веб-сайте для отслеживания статуса доставки.
+            </p>
+        </div>
+    </details>
+    <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <summary itemprop="name">Что делать, если у меня возникли проблемы с заказом?</summary>
+        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">
+                Если у вас возникли проблемы с заказом, пожалуйста, свяжитесь с нашей службой поддержки 
+                клиентов по телефону или по электронной почте. Мы постараемся решить любые проблемы в кратчайшие сроки.
+            </p>
+        </div>
+    </details>
+</section>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static '/css/info.css' %}">
+{% endblock %}
+
+{% block title %}Скидки и купоны{% endblock %}
+
+{% block content %}
+    <section class="coupons">
+        <h2>Скидки и купоны</h2>
+        <article class="coupon" itemscope itemtype="https://schema.org/Offer">
+            <h3 itemprop="name">Скидка на первую покупку</h3>
+            <p itemprop="description"><strong>Описание:</strong>
+                Получите 10% скидку на ваш первый заказ в зоомагазине при использовании промокода "WELCOME10".</p>
+            <p><strong>Действительность:</strong> Действителен до
+                <time itemprop="validThrough" datetime="2023-31-12">Декабрь 31, 2023</time>
+            </p>
+        </article>
+
+
+        <article class="coupon" itemscope itemtype="https://schema.org/Offer">
+            <h3 itemprop="name">Программа лояльности</h3>
+            <p itemprop="description"><strong>Описание:</strong>
+                Присоединитесь к программе лояльности нашего зоомагазина и получайте 
+                специальные купоны и скидки на регулярной основе.</p>
+            <p><strong>Действительность:</strong> Действителен до
+                <time itemprop="validThrough" datetime="2023-31-12">Декабрь 31, 2023</time>
+            </p>
+        </article>
+
+        <article class="coupon" itemscope itemtype="https://schema.org/Offer">
+            <h3 itemprop="name">Купон на корм для кошек</h3>
+            <p itemprop="description"><strong>Описание:</strong>
+                При покупке любого мешка корма для кошек размером 5 кг вы получаете второй мешок со скидкой 50%.</p>
+            <p><strong>Действительность:</strong> Действителен до
+                <time itemprop="validThrough" datetime="2023-31-12">Декабрь 31, 2023</time>
+            </p>
+        </article>
+
+        <article class="coupon" itemscope itemtype="https://schema.org/Offer">
+            <h3 itemprop="name">Акция "Купи больше - плати меньше" <span class="context-valid">(Не действителен)</span></h3>
+            <p itemprop="description"><strong>Описание:</strong>
+                При покупке трех или более товаров для животных вы получаете 20% скидку на всю покупку.</p>
+            <p><strong>Действительность:</strong> Действителен до
+                <time itemprop="validThrough" datetime="2022-31-12">Декабрь 31, 2022</time>
+            </p>
+            <p><strong>Уведомление:</strong> Срок действия этого купона истек, и он больше не действителен. Пожалуйста,
+                проверьте наш веб-сайт или посетите наш кинотеатр для получения наших текущих скидок.</p>
+        </article>
+    </section>
+{% endblock %}
